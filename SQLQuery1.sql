@@ -1,26 +1,3 @@
-﻿--DECLARE @sql NVARCHAR(MAX) = '';
---SELECT @sql += 'ALTER TABLE ' + OBJECT_NAME(parent_object_id) + ' DROP CONSTRAINT ' + name + ';'
---FROM sys.foreign_keys;
---EXEC sp_executesql @sql;
---GO
-
---IF OBJECT_ID('Delivery_Items', 'U') IS NOT NULL DROP TABLE Delivery_Items;
---IF OBJECT_ID('Deliveries', 'U') IS NOT NULL DROP TABLE Deliveries;
---IF OBJECT_ID('Payments', 'U') IS NOT NULL DROP TABLE Payments;
---IF OBJECT_ID('Order_Items', 'U') IS NOT NULL DROP TABLE Order_Items;
---IF OBJECT_ID('Combo_Components', 'U') IS NOT NULL DROP TABLE Combo_Components;
---IF OBJECT_ID('Orders', 'U') IS NOT NULL DROP TABLE Orders;
---IF OBJECT_ID('Reservations', 'U') IS NOT NULL DROP TABLE Reservations;
---IF OBJECT_ID('Group_Reservations', 'U') IS NOT NULL DROP TABLE Group_Reservations;
---IF OBJECT_ID('Promotions', 'U') IS NOT NULL DROP TABLE Promotions;
---IF OBJECT_ID('Product_Batches', 'U') IS NOT NULL DROP TABLE Product_Batches;
---IF OBJECT_ID('Inventory', 'U') IS NOT NULL DROP TABLE Inventory;
---IF OBJECT_ID('Menu', 'U') IS NOT NULL DROP TABLE Menu;
---IF OBJECT_ID('Employees', 'U') IS NOT NULL DROP TABLE Employees;
---IF OBJECT_ID('Guests', 'U') IS NOT NULL DROP TABLE Guests;
---IF OBJECT_ID('Table_Status', 'U') IS NOT NULL DROP TABLE Table_Status;
---IF OBJECT_ID('Tables', 'U') IS NOT NULL DROP TABLE Tables;
---GO
 
 -- =============================
 -- 1. Таблиця TABLES (Столи)
@@ -288,4 +265,5 @@ CREATE TABLE Delivery_Items (
     FOREIGN KEY (Batch_ID) REFERENCES Product_Batches(Batch_ID)
 );
 END
+
 GO
